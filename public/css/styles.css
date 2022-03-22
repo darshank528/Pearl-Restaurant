@@ -1,0 +1,216 @@
+body {
+    overflow-x: hidden !important;
+    text-align: center;
+}
+
+.container-fluid {
+  padding: 5% 15% 7% !important;
+}
+
+.nav-item {
+  padding: 20px 18px;
+  font-family: 'Poiret One', cursive !important;
+  font-weight: bolder !important;
+}
+
+#header {
+  background-image: url("../images/homepage.jpg");
+  height: 750px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: calc(var(--bs-gutter-x)/ 0);
+  margin-left: calc(var(--bs-gutter-x)/ 0);
+}
+
+#footer {
+  background-image: url("../images/contact.jpg");
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: calc(var(--bs-gutter-x)/ 0);
+  margin-left: calc(var(--bs-gutter-x)/ 0);
+}
+
+.cart-btn {
+  margin: 5% 0;
+}
+
+.cta-dwn {
+  margin: 5% 2% 0 2%;
+}
+
+.cta-h3 {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-family: 'Cinzel Decorative', cursive;
+  line-height: 1.5 !important;
+  font-weight: bolder !important;
+  color: white;
+  padding-top: 15%;
+}
+
+.foot-ele {
+  padding-top: 15%;
+}
+
+.social-icon {
+  color: white;
+  margin: 0 2% 2% 2%;
+}
+
+.foot-text {
+  color: white;
+  font-family: 'Poiret One', cursive !important;
+  font-weight: bolder !important;
+  font-size: 1.3rem;
+}
+
+.heading {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 3rem;
+  line-height: 1.5 !important;
+  font-weight: bolder !important;
+  color: white;
+  padding-top: 15%;
+}
+
+.header-para {
+  font-family: 'Ubuntu';
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  color: white;
+}
+
+#features {
+  padding: 10% 7%;
+}
+
+.features-img {
+  width: 70%;
+  border-radius: 20%;
+  margin: 5% 10%;
+}
+
+.feature-heading {
+  font-family: 'Ubuntu';
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  margin: 5%;
+}
+
+.feature-para {
+  font-family: 'Poiret One', cursive !important;
+  font-weight: bolder !important;
+  font-size: 1.3rem !important;
+}
+
+.menu-header {
+  background-image: url("../images/menu.jpg");
+  height: 750px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: calc(var(--bs-gutter-x)/ 0);
+  margin-left: calc(var(--bs-gutter-x)/ 0);
+}
+
+.menu-btn {
+  margin: 10% 30%;
+}
+
+.menu-icon {
+  width: 10%;
+}
+
+#menu-items {
+  padding: 5% 7%;
+}
+
+.food-img {
+  margin-top: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 15%;
+}
+
+.card-title {
+  font-family: 'Ubuntu' !important;
+  font-size: 2rem !important;
+  font-weight: bold !important;
+}
+
+.card-text {
+  font-family: 'Poiret One', cursive !important;
+  font-weight: bolder !important;
+  font-size: 1.3rem !important;
+}
+
+.cart-btn {
+  margin-left: 20px;
+}
+
+.skills {
+  margin: 120px auto;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 100px auto;
+  text-align: left;
+}
+
+.img2 {
+  width: 40%;
+  height: auto;
+  border-radius: 10%;
+  float: left;
+  margin-right: 40px;
+}
+
+.img3 {
+  width: 50%;
+  height: auto;
+  border-radius: 10%;
+  float: right;
+  margin-left: 40px;
+}
+
+.location {
+  padding-top: 5%;
+  margin-bottom: 6%;
+}
+
+.location-img {
+  height: 40%;
+  width: 70% !important;
+  border-radius: 15% !important;
+  margin-top: 12%;
+  margin-bottom: 3%;
+}
+
+.cart-card {
+  width: 70%;
+  margin: 5% 0;
+}
+
+.cart-img {
+  width: 100%;
+  height: auto;
+}
+
+.gotomenu-icon {
+  width: 5%;
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}

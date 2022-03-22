@@ -1,0 +1,78 @@
+<%- include("partials/header") -%>
+
+<%
+var sum = 0;
+listItems.forEach(function(item) {
+  var name = "";
+  var price = 0;
+  var img = "";
+  switch (item.name) {
+
+    case "burrito":
+      name = "Chicken Burrito";
+      price = item.quantity * 25;
+      img = "images/burrito.jpg";
+      break;
+
+    case "steak":
+      name = "Steak";
+      price = item.quantity * 30;
+      img = "https://i.postimg.cc/02yn1yQp/beef-cooking-delicious-769289.jpg";
+      break;
+
+    case "sandwich":
+      name = "Club Sandwich";
+      price = item.quantity * 15;
+      img = "https://i.postimg.cc/8kWVKMXF/bread-breakfast-burlap-1600711-scaled.jpg";
+      break;
+
+    case "burger":
+      name = "Bacon Cheeseburger";
+      price = item.quantity * 20;
+      img = "https://i.postimg.cc/xTpRfVJB/burger-chips-dinner-70497.jpg";
+      break;
+
+    case "cake":
+      name = "Choclate Cake";
+      price = item.quantity * 12;
+      img = "https://i.postimg.cc/Xq6tS11r/cake-chocolate-chocolate-cake-132694-scaled.jpg";
+      break;
+  }
+  sum = sum + price;
+%>
+<div class="card mx-auto mb-6 cart-card">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="<%= img %>" class="cart-img" alt="">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= name %></h5>
+        <p class="card-text">Quantity: <%= item.quantity %> <i class="fas fa-caret-right"></i> <span style="font-family: 'Ubuntu' !important; font-size: 1.8rem !important;">$<%= price %></span></p>
+        <p class="card-text"><small class="text-muted">Inclusive of all taxes</small></p>
+        <form action="/deliver" method="post">
+          <button name="removeItem" value="<%= item._id %>" type="submit" class="btn btn-sm btn-outline-dark">Order Delivered</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<% }); %>
+
+<% if(sum === 0) { %>
+<div class="card mx-auto mb-6 cart-card ">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="images/02.jpg" class="cart-img" alt="">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">No orders to display.</h5>
+        <p class="card-text">All the orders have been Delivered!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>
+
+<%- include("partials/footer") -%>

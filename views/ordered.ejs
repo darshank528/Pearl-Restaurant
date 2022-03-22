@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pearl Restaurant</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Lobster&family=Poiret+One&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+  <style>
+    .container {
+      max-width: 80%;
+    }
+
+    .card-title {
+      font-size: 3rem !important;
+    }
+
+    .jumbo-title {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 2.2rem !important;">
+      line-height: 1.5 !important;
+      font-weight: bolder !important;
+    }
+
+    .foot-text {
+      color: black;
+      text-align: center;
+      margin-bottom: 6%;
+      font-size: 1.5rem !important;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <main>
+    <div class="container py-4">
+      <header class="pb-3 mb-4 border-bottom">
+        <a class="d-flex align-items-center text-dark text-decoration-none">
+          <img src="images/icon3.png" alt="">
+          <span class="jumbo-title fs-4">Order placed!</span>
+        </a>
+      </header>
+
+      <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold card-title">Hello <%= name %>, your delicious food is on the way! </h1>
+          <p class="fs-4 card-text" style="font-size: 2.3rem !important; margin:5% 0;">Your order ID is: <%= orderID %></p>
+          <a href="/" class="btn btn-outline-dark btn-lg" type="button">Go to Home</a>
+        </div>
+      </div>
+
+
+
+      <footer class="pt-3 mt-4 border-top">
+        <p class="foot-text">© 2021 Pearl Restaurant</p>
+      </footer>
+    </div>
+  </main>
+
+</body>
+
+</html>

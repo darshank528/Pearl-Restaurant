@@ -1,0 +1,127 @@
+<%- include("partials/header") -%>
+
+<section id="features">
+
+  <div class="row">
+
+    <div class="feature-box col-lg-4">
+      <img class="features-img" src="images/service.jpg" alt="">
+      <h3 class="feature-heading">Known for service</h3>
+      <p class="feature-para">We are committed to provide you with an exceptional dining experience every time you walk through our door.</p>
+    </div>
+
+    <div class="feature-box col-lg-4">
+      <img class="features-img" src="images/food.jpg" alt="">
+      <h3 class="feature-heading">Modern Asian Dining</h3>
+      <p class="feature-para">We offer authentic Chinese and Asian cuisine from the different parts of China and the Far East.</p>
+    </div>
+
+    <div class="feature-box col-lg-4">
+      <img class="features-img" src="images/taste.jpg" alt="">
+      <h3 class="feature-heading">A harmonious taste</h3>
+      <p class="feature-para">Our chefs understand that the secret of good taste lies largely in the freshness of the ingredients and creating a harmionious combination of tastes.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="menu">
+
+  <div class="menu-header">
+    <h1 class="heading">We love wonderful tastes and food.</h1>
+    <p class="header-para">Check out our selection of wonderful Asian cuisine.</p>
+    <a href="#menu-items" class="btn btn-outline-light btn-lg menu-btn"><img class="menu-icon" src="images/menu.png" alt=""> Menu</a>
+  </div>
+
+</section>
+
+<section id="menu-items">
+
+  <div class="row">
+
+    <div class="col-lg-4 col-md-6">
+      <img class="food-img" src="images/burrito.jpg" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Chicken Burrito</h5>
+        <h4 class="card-title"> $25</h4>
+        <p class="card-text">A super-filling meal stuffed with various filling like seasoned rice, tangy mexican salsa, grilled fajitas, sauteed spicy chicken, sour cream, cucumber and cheese.</p>
+      </div>
+      <form action="/add" method="post">
+        <div class="card-body input-group mb-3">
+          <input name="quantity" type="number" class="form-control" value=0 min=0 max=100>
+          <button name="food" value="burrito" type="submit" class="btn btn-outline-dark">Add to Cart</button>
+          <a href="cart" class="btn btn-dark"><i class="fas fa-shopping-cart"></i> Go to Cart</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <img class="food-img" src="https://i.postimg.cc/02yn1yQp/beef-cooking-delicious-769289.jpg" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Steak</h5>
+        <h4 class="card-title"> $30</h4>
+        <p class="card-text">Flavoursome chicken served with herbed vegetables that are pan roasted along with velvety smooth mashed potatoes.</p>
+      </div>
+      <form action="/add" method="post">
+        <div class="card-body input-group mb-3">
+          <input name="quantity" type="number" class="form-control" value=0 min=0 max=100>
+          <button name="food" value="steak" type="submit" class="btn btn-outline-dark">Add to Cart</button>
+          <a href="cart" class="btn btn-dark"><i class="fas fa-shopping-cart"></i> Go to Cart</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <img class="food-img" src="https://i.postimg.cc/8kWVKMXF/bread-breakfast-burlap-1600711-scaled.jpg" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Club Sandwich</h5>
+        <h4 class="card-title"> $15</h4>
+        <p class="card-text">Layers of ham, bacon and turkey with juicy tomatoes, crisp lettuce and cheddar cheese create the perfect bite!</p>
+      </div>
+      <form action="/add" method="post">
+        <div class="card-body input-group mb-3">
+          <input name="quantity" type="number" class="form-control" value=0 min=0 max=100>
+          <button name="food" value="sandwich" type="submit" class="btn btn-outline-dark">Add to Cart</button>
+          <a href="cart" class="btn btn-dark"><i class="fas fa-shopping-cart"></i> Go to Cart</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <img class="food-img" src="https://i.postimg.cc/xTpRfVJB/burger-chips-dinner-70497.jpg" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Bacon Cheeseburger</h5>
+        <h4 class="card-title"> $20</h4>
+        <p class="card-text">A flame-grilled beef patty, bacon, American cheese, crinkle-cut pickles, yellow mustard, and ketchup on a toasted sesame seed bun.</p>
+      </div>
+      <form action="/add" method="post">
+        <div class="input-group mb-3">
+          <input name="quantity" type="number" class="form-control" value=0 min=0 max=100>
+          <button name="food" value="burger" type="submit" class="btn btn-outline-dark">Add to Cart</button>
+          <a href="cart" class="btn btn-dark"><i class="fas fa-shopping-cart"></i> Go to Cart</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <img class="food-img" src="https://i.postimg.cc/Xq6tS11r/cake-chocolate-chocolate-cake-132694-scaled.jpg" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Choclate Cake</h5>
+        <h4 class="card-title"> $12</h4>
+        <p class="card-text">A rich moist chocolate cake with a chocolate buttercream icing. </p>
+      </div>
+      <form action="/add" method="post">
+        <div class="card-body input-group mb-3">
+          <input name="quantity" type="number" class="form-control" value=0 min=0 max=100>
+          <button name="food" value="cake" type="submit" class="btn btn-outline-dark">Add to Cart</button>
+          <a href="cart" class="btn btn-dark"><i class="fas fa-shopping-cart"></i> Go to Cart</a>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</section>
+
+<%- include("partials/footer") -%>

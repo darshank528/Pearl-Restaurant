@@ -1,0 +1,99 @@
+<%- include("partials/header") -%>
+
+<%
+var sum = 0;
+listItems.forEach(function(item) {
+  var name = "";
+  var price = 0;
+  var img = "";
+  switch (item.name) {
+
+    case "burrito":
+      name = "Chicken Burrito";
+      price = item.quantity * 25;
+      img = "images/burrito.jpg";
+      break;
+
+    case "steak":
+      name = "Steak";
+      price = item.quantity * 30;
+      img = "https://i.postimg.cc/02yn1yQp/beef-cooking-delicious-769289.jpg";
+      break;
+
+    case "sandwich":
+      name = "Club Sandwich";
+      price = item.quantity * 15;
+      img = "https://i.postimg.cc/8kWVKMXF/bread-breakfast-burlap-1600711-scaled.jpg";
+      break;
+
+    case "burger":
+      name = "Bacon Cheeseburger";
+      price = item.quantity * 20;
+      img = "https://i.postimg.cc/xTpRfVJB/burger-chips-dinner-70497.jpg";
+      break;
+
+    case "cake":
+      name = "Choclate Cake";
+      price = item.quantity * 12;
+      img = "https://i.postimg.cc/Xq6tS11r/cake-chocolate-chocolate-cake-132694-scaled.jpg";
+      break;
+  }
+  sum = sum + price;
+%>
+<div class="card mx-auto mb-3 cart-card">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="<%= img %>" class="cart-img" alt="">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= name %></h5>
+        <p class="card-text">Quantity: <%= item.quantity %> <i class="fas fa-caret-right"></i> <span style="font-family: 'Ubuntu' !important; font-size: 1.8rem !important;">$<%= price %></span></p>
+        <p class="card-text"><small class="text-muted">Inclusive of all taxes</small></p>
+        <form action="/remove" method="post">
+          <button name="removeItem" value="<%= item.name %>" type="submit" class="btn btn-sm btn-outline-dark">Remove from Cart</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<% }); %>
+
+<% if(sum>0) { %>
+  <div class="card mx-auto mb-6 cart-card ">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="images/02.jpg" class="cart-img" alt="">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Your Cart total is: $<%= sum %></h5>
+          <p class="card-text">Inclusive of all taxes</p>
+        </div>
+        <form action="/place" method="get">
+          <button type="submit" class="btn btn-lg btn-outline-dark">Place Order!</button>
+        </form>
+      </div>
+    </div>
+  </div>
+<% } else { %>
+  <div class="card mx-auto mb-6 cart-card ">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="images/02.jpg" class="cart-img" alt="">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Your Cart is empty!</h5>
+          <p class="card-text">Please add something to your cart!</p>
+        </div>
+          <a href="/#menu-items" class="btn btn-sm btn-outline-dark"><img class="gotomenu-icon" src="images/menu.png" alt=""> Go to Menu</a>
+      </div>
+    </div>
+  </div>
+<% } %>
+
+
+
+
+<%- include("partials/footer") -%>
